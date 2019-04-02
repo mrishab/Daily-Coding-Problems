@@ -52,6 +52,15 @@ public class Problem3 {
         else
             System.out.println("Failed");
 
+        Node deserializedEfficiently = deserialized(serialized);
+        String serializedEfficiently = serialize(deserializedEfficiently);
+
+        if (serialized.equals(serializedEfficiently))
+            System.out.println("Successful");
+        else
+            System.out.println("Failed");
+
+
     }
 
     public static String serialize(Node root) {
@@ -85,6 +94,26 @@ public class Problem3 {
         root.left = deserialize(values);
         root.right = deserialize(values);
         return root;
+    }
+
+    // Efficient Deserialization
+    public static Node deserialized (String serialized) {
+        String[] values = serialized.split(DELIMITER);
+        int[] index = {0};
+        return deserialized(values, index);
+    }
+
+    private static Node deserialized (String[] values, int[] i) {
+        if (i[0] == values.length - 1 || values[i[0]].equals(NULL_VALUE))
+            return null;
+        int value = Integer.parseInt(values[i[0]]);
+        Node root = new Node(value);
+        i[0]++;
+        root.left = deserialized(values, i);
+        i[0]++;
+        root.right = deserialized(values, i);
+        return root;
+
     }
 }
 
