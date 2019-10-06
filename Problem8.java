@@ -65,8 +65,8 @@ class UNode {
 
         if (right != null)
             uniValTrees += right.numOfUniValTree();
-
-        if ((value == left.value) && (value == right.value))
+        
+        if (left.value == right.value)
             uniValTrees++;
 
         return uniValTrees;
