@@ -227,6 +227,15 @@ Given an array of time intervals (start, end) for classroom lectures (possibly o
 
 For example, given `[(30, 75), (0, 50), (60, 150)]`, you should return `2`.
 
+[View Answer](./src/Problem21.java)
+
+## Problem 662
+This problem was asked by Amazon.
+Given n numbers, find the greatest common denominator between them.
+For example, given the numbers [42, 56, 14], return 14.
+
+[View Answer](./src/Problem662.java)
+
 ## Problem 701
 This problem was asked by Amazon.
 At a popular bar, each customer has a set of favorite drinks, and will happily accept any drink among this set. For example, in the following situation, customer 0 will be satisfied with drinks 0, 1, 3, or 6.
