@@ -226,3 +226,11 @@ This problem was asked by Snapchat.
 Given an array of time intervals (start, end) for classroom lectures (possibly overlapping), find the minimum number of rooms required.
 
 For example, given `[(30, 75), (0, 50), (60, 150)]`, you should return `2`.
+
+## Problem 746
+This problem was asked by Amazon.
+Implement a stack that has the following methods:
+•	`push(val)`, which pushes an element onto the stack
+•	`pop()`, which pops off and returns the topmost element of the stack. If there are no elements in the stack, then it should throw an error or return null.
+•	`max()`, which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
+Each method should run in constant time.
