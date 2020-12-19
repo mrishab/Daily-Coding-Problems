@@ -227,6 +227,22 @@ Given an array of time intervals (start, end) for classroom lectures (possibly o
 
 For example, given `[(30, 75), (0, 50), (60, 150)]`, you should return `2`.
 
+## Problem 725
+This problem was asked by Amazon.
+Consider the following scenario: there are N mice and N holes placed at integer points along a line. Given this, find a method that maps mice to holes such that the largest number of steps any mouse takes is minimized.
+Each move consists of moving one mouse one unit to the left or right, and only one mouse can fit inside each hole.
+For example, suppose the mice are positioned at [1, 4, 9, 15], and the holes are located at [10, -5, 0, 16]. In this case, the best pairing would require us to send the mouse at 1 to the hole at -5, so our function should return 6.
+
+[View Answer](./src/Problem725.java)
+
+## Problem 738
+This problem was asked by Amazon.
+Given a string s and an integer k, break up the string into multiple lines such that each line has a length of k or less. You must break it up so that words don't break across lines. Each line has to have the maximum possible amount of words. If there's no way to break the text up, then return null.
+You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
+For example, given the string "the quick brown fox jumps over the lazy dog" and k = 10, you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
+
+[View Answer](./src/Problem738.java)
+
 ## Problem 746
 This problem was asked by Amazon.
 Implement a stack that has the following methods:
@@ -236,11 +252,3 @@ Implement a stack that has the following methods:
 Each method should run in constant time.
 
 [View Answer](./src/Problem746.java)
-
-## Problem 738
-This problem was asked by Amazon.
-Given a string s and an integer k, break up the string into multiple lines such that each line has a length of k or less. You must break it up so that words don't break across lines. Each line has to have the maximum possible amount of words. If there's no way to break the text up, then return null.
-You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
-For example, given the string "the quick brown fox jumps over the lazy dog" and k = 10, you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
-
-[View Answer](./src/Problem738.java)
