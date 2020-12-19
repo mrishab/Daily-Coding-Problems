@@ -234,3 +234,13 @@ Implement a stack that has the following methods:
 •	`pop()`, which pops off and returns the topmost element of the stack. If there are no elements in the stack, then it should throw an error or return null.
 •	`max()`, which returns the maximum value in the stack currently. If there are no elements in the stack, then it should throw an error or return null.
 Each method should run in constant time.
+
+[View Answer](./src/Problem746.java)
+
+## Problem 738
+This problem was asked by Amazon.
+Given a string s and an integer k, break up the string into multiple lines such that each line has a length of k or less. You must break it up so that words don't break across lines. Each line has to have the maximum possible amount of words. If there's no way to break the text up, then return null.
+You can assume that there are no spaces at the ends of the string and that there is exactly one space between each word.
+For example, given the string "the quick brown fox jumps over the lazy dog" and k = 10, you should return: ["the quick", "brown fox", "jumps over", "the lazy", "dog"]. No string in the list has a length of more than 10.
+
+[View Answer](./src/Problem738.java)
