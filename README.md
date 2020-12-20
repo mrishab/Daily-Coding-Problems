@@ -229,10 +229,18 @@ For example, given `[(30, 75), (0, 50), (60, 150)]`, you should return `2`.
 
 [View Answer](./src/Problem21.java)
 
+## Problem 641
+This problem was asked by Amazon.
+Given a sorted array, find the smallest positive integer that is not the sum of a subset of the array.
+For example, for the input `[1, 2, 3, 10]`, you should return `7`.
+Do this in `O(N)` time.
+
+[View Answer](./src/Problem641.java)
+
 ## Problem 662
 This problem was asked by Amazon.
 Given n numbers, find the greatest common denominator between them.
-For example, given the numbers [42, 56, 14], return 14.
+For example, given the numbers `[42, 56, 14]`, return `14`.
 
 [View Answer](./src/Problem662.java)
 
