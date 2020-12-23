@@ -295,3 +295,11 @@ Given `[2, 5, 10]` and `amount = 6`, the method should return `3`.
 Given `[1, 2, 5]` and `amount = 7`, the method should return `2`.
 
 [View Answer](./src/CoinChangeProblem.java)
+
+## Problem - Distint Groups
+This problem was asked by Amazon.
+
+The given matrix represents a direct relation of users `0` to `n` with other users `0` to `n`. Each user `x` has direct relation to user `y` if `relations[x][y] == 1`. A group represents a set of users that are either directly or transitively related.
+Therefore, relations `x -> y` and `y -> z` are part of the same group as `x` and `z` are related to each other through user `y`. Find the total number of distinct groups that exist in the given matrix.
+
+[View Answer](./src/AmazonCodingProblemDistinctGroups.java)
