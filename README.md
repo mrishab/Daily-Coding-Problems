@@ -302,6 +302,24 @@ Write a program that returns the weight of the maximum weight path.
 
 [View Answer](./src/Problem867.java)
 
+## Problem 1630
+This problem was asked by Facebook.
+
+Given a binary tree, return all paths from the root to leaves.
+
+For example, given the tree:
+```
+   1
+  / \
+ 2   3
+    / \
+   4   5
+```
+
+Return `[[1, 2], [1, 3, 4], [1, 3, 5]]`.
+
+[View Answer](./src/Problem1630.java)
+
 ## Problem - Coin Change
 Given a set of coins and a total money amount. Write a method to compute the smallest number of coins to make up the given amount. If the amount cannot be made up by any combination of the given coins, return -1.
 
