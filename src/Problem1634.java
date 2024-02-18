@@ -34,22 +34,23 @@ public class Problem1634 {
     public static String[] getTransformationPath(String start, String end, String[] map) {
         String[] transformationPath = null;
 
-        // All items not yet added to BFS
+        // Keeping all items not yet added a child of any node
         Queue<String> remaining = new LinkedList<>();
         for (String s: map) {
             remaining.add(s);
         }
 
-        // All items have that been looped over in an iteration
-        Queue<String> pending = new LinkedList<>();
-        
         // To perform BFS search
         Queue<SNode> bfs = new LinkedList<>();
+        // Adding first root node
         bfs.add(new SNode(start));
 
         SNode curr;
         for (curr = bfs.poll(); curr != null && !curr.data.equals(end); curr = bfs.poll()) {
-            for (String r = remaining.poll(); r != null; r = remaining.poll()) {
+            int remainingCount = remaining.size();
+            String r;
+            while (remainingCount > 0) {
+                r = remaining.poll();
                 int diff = getCharacterDiff(curr.data, r);
                 if (diff == 1) {
                     // Make a child of current node and also add to BFS search list
@@ -58,21 +59,14 @@ public class Problem1634 {
                     SNode n = new SNode(r, curr);
                     bfs.add(n);
                 } else {
-                    pending.add(r);
+                    remaining.add(r);
                 }
+                remainingCount--;
             }
-
-            // Swap the empty remaining list with the pending items
-            Queue<String> tmp = remaining;
-            remaining = pending;
-            pending = tmp;
         }
 
         if (curr.data.equals(end)) {
-            transformationPath = new String[curr.height() + 1];
-            for (; curr != null; curr = curr.parent) {
-                transformationPath[curr.height()] = curr.data;
-            }
+            transformationPath = stringifyPath(curr);
         }
 
         return transformationPath;
@@ -91,8 +85,17 @@ public class Problem1634 {
                 diff++;
             }
         }
-        
+
         return diff;
+    }
+
+    public static String[] stringifyPath(SNode node) {
+        String[] path = new String[node.height() + 1];
+        for (; node != null; node = node.parent) {
+            path[node.height()] = node.data;
+        }
+
+        return path;
     }
 }
 
