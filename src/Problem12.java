@@ -17,7 +17,7 @@ public class Problem12 {
     public static void main(String[] args) {
         System.out.println(waysX(5, new int[] {1, 2}));
     }
-    
+
     public static int waysX(int n, int[] steps) {
         int[] cache = new int[n+1];
         return waysX(n, steps, cache);

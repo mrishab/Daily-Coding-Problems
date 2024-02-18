@@ -29,7 +29,7 @@ public class Problem1630 {
 
     System.out.println(Arrays.deepToString(paths));
   }
-    
+
   public static int[][] getPaths(Node root) {
     return getPaths(root, 1);
   }
@@ -52,7 +52,7 @@ public class Problem1630 {
         leftPath[height - 1] = node.data;
       }
     }
-    
+
     if (node.left == null && node.right == null) {
       // I am the leaf node
       myPaths = new int[1][height];
